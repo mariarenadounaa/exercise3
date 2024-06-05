@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML,CSS,footer">
+    <title>Responsive Page</title>
+    <style>
+        /* Basic styles */
+        body {
+            background-color: violet;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-areas: 
+                "header header"
+                "nav main"
+                "footer footer";
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: auto 1fr auto;
+            height: 100vh;
+        }
+
+        footer {
+            background: lightskyblue
+            padding 1em;
+            text-align:center;
+        }
+
+        header {
+            grid-area: header;
+            background: lightblue;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav {
+            grid-area: nav;
+            background: green;
+            padding: 1em;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav li {
+            margin: 1em 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+        }
+
+        main {
+            grid-area: main;
+            padding: 1em;
+        }
+
+        section {
+            margin: 1em 0;
+        }
+
+        section img, section video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 756px) {
+            body {
+                grid-template-areas: 
+                    "header"
+                    "nav"
+                    "main"
+                    "footer";
+                grid-template-columns: 2fr;
+                grid-template-rows: auto auto 1fr auto;
+            }
+
+            nav {
+                padding: 0.5em;
+            }
+
+            nav ul {
+                flex-direction: row;
+                justify-content: space-around;
+            }
+
+            nav li {
+                margin: 0.5em 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- This is header -->
+    <header>
+        <h1>New Page</h1>
+    </header>
+
+    <!-- This is navigation bar -->
+    <nav>
+        <ul>
+            <li><a href="other-pages/services.html">Services</a></li>
+            <li><a href="other-pages/contact.html">Contact</a></li>
+            <li><a href="#About">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- This is main content -->
+    <main>
+        <section>
+            <h2>Html και CSS</h2>
+            <p> HTML (HyperText Markup Language) είναι η γλώσσα προγραμματισμού που χρησιμοποιείται για τη δημιουργία δομημένων ιστοσελίδων, καθορίζοντας τη δομή και το περιεχόμενο της σελίδας. Από την άλλη πλευρά, η CSS (Cascading Style Sheets) χρησιμοποιείται για την επιμέλεια της εμφάνισης των ιστοσελίδων, καθορίζοντας τον σχεδιασμό, τα χρώματα, τις γραμματοσειρές και άλλες αισθητικές πτυχές. Με τη συνδυασμένη χρήση της HTML και της CSS, μπορούμε να δημιουργήσουμε εντυπωσιακές ιστοσελίδες που όχι μόνο παρέχουν πλοήγηση και πληροφορίες, αλλά και καθηλώνουν τον χρήστη με τον εκλεπτυσμένο τους σχεδιασμό.</p>
+            <img src="html-css.png" alt="HTML and CSS">
+            
+            <video controls width="500" height="500" autoplay loop muted preload="auto">
+                <source src="html-video.mp4" type="video/mp4">
+            </video>
+            
+            <section id="About">
+                <p>About.. This is a paragraph to show that the link works.</p>   
+            </section>
+            
+            <a href="https://stackoverflow.com/">This is a link</a>
+        </section>
+
+        <section>
+            <p>This is a non-semantic paragraph that exists in the file</p>
+        </section>
+    </main>
+
+    <!-- This is footer -->
+    <footer>
+        <hr>
+        <h3>This is the footer of the page</h3>
+        <article>This is the end of the page. This article was about HTML and CSS. Sooo, Good Bye Reader! &lt;3</article>
+    </footer>
+</body>
+</html>
